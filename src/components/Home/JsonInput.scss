@@ -1,0 +1,67 @@
+@import '../../sass/constants';
+@import '../../sass/mixins';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: '100%';
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
+    width: "100%";
+    .form-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: "100%";
+    }
+    .form-label {
+      align-self: flex-start;
+      font-size: medium;
+      color: #FFFFFF;
+      font-weight: 600;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+    }
+    .form-input {
+      @include scrollbars(10px, $tertiaryColor, $headerBackgroundColor);
+      border-width: 0;
+      border-radius: 10%;
+      background-color: $secondaryColor;
+      color: #FFFFFF;
+      padding: 1em;
+    }
+    .form-button {
+      padding: 1.0em;
+      margin-top: 1.0em;
+      background-color: $tertiaryColor;
+      border-radius: 20%;
+      border-color: $primaryColor;
+      font-weight: 700;
+      width: 20%;
+      color: #FFFFFF;
+    }
+  }
+
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+    .data-text {
+      font-size: medium;
+      font-weight: 600;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+    }
+  }
+}
