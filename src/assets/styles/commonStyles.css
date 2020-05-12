@@ -1,0 +1,11 @@
+body {
+  overflow-x: hidden;
+}
+
+.white-space {
+  white-space: pre-line;
+}
+
+.body-container {
+  display: flex;
+}
