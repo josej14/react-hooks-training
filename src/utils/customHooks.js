@@ -2,19 +2,14 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import _ from 'lodash';
 
 const useInterval = (callback, delay) => {
-  const savedCallback = useRef();
 
   useEffect(() => {
-    savedCallback.current = callback;
+
   });
 
   useEffect(() => {
-    const tick = () => {
-      savedCallback.current();
-    };
 
-    const id = setInterval(tick, delay);
-    return () => clearInterval(id);
+    // const id = setInterval(tick, delay);
   }, [delay]);
 };
 
