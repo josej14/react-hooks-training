@@ -1,10 +1,13 @@
 const texts = {
   HOME: {
-    insert: 'Insert JSON:',
-    generate: 'Generate Diagram',
+    ANIMALS: {
+      cow: 'Cow',
+      pig: 'Pig',
+      sheep: 'Sheep',
+    }
   },
   GLOBAL: {
-    headerTitle: 'Kugui',
+    headerTitle: 'React Hooks Training',
     faq: 'FAQ',
   }
 };

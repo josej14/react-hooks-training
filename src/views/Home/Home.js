@@ -1,18 +1,22 @@
 import './Home.scss';
 import React, { useState } from 'react';
 import HomeContainer from '../../components/Layout/HomeContainer';
-import JsonInput from '../../components/Home/JsonInput';
-import DiagramMaker from '../../components/Home/DiagramMaker';
+import CountDown from '../../components/Home/CountDown';
+import MultipleState from '../../components/Home/MultipleState';
 
 const Home = () => {
-  const [jsonObj, setJsonObj] = useState({});
+  const [mount, setMount] = useState(false);
+  const switchMount = () => setMount(!mount);
   return (
     <HomeContainer>
       <div className='first-column'>
-        <JsonInput data={jsonObj} setJsonObj={setJsonObj} />
+        <MultipleState/>
       </div>
       <div className='second-column'>
-        <DiagramMaker jsonObj={jsonObj} />
+        {mount &&
+          <CountDown />
+        }
+        <button onClick={switchMount}>Mount/Dismount</button>
       </div>
     </HomeContainer>
   );
